@@ -31,3 +31,16 @@ FROM table1
 INNER JOIN FAKTURY
 ON FAKTURY.user_id = table1.id
 WHERE brutto > '25000'
+
+
+
+//--ZAD8
+SELECT MIASTA.city, SUM(FAKTURY.BRUTTO) as brutto
+FROM MIASTA
+INNER JOIN table1
+ON table1.city_id = MIASTA.id
+INNER JOIN FAKTURY
+ON FAKTURY.user_id = table1.id
+GROUP BY table1.id
+ORDER BY brutto DESC
+LIMIT 1
