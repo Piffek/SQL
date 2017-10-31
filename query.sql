@@ -14,3 +14,13 @@ WHERE NOT EXISTS  (
   FROM table2 
   WHERE table2.user_id = table1.id
 )
+
+/*GET sum price of table 2 and name of table1 - GROUP BY, SUM, LIMIT */
+
+SELECT table1.name, SUM(table2.price)
+FROM table1
+INNER JOIN table2
+ON table2.user_id = table1.id
+GROUP BY table1.name
+ORDER BY table2.price ASC
+LIMIT 3
