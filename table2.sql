@@ -40,11 +40,11 @@
   `id` int(6),
   `user_id` int(6),
   `BRUTTO` int(12),
-  `MOUTH` varchar(20),
+  `MONTH` varchar(20),
   FOREIGN KEY (`user_id`) REFERENCES table1(`id`),
   PRIMARY KEY (`id`)
   );
-  INSERT INTO `FAKTURY` (`id`, `user_id`, `BRUTTO`, `MOUTH`) VALUES
+  INSERT INTO `FAKTURY` (`id`, `user_id`, `BRUTTO`, `MONTH`) VALUES
   ('1', '1', '5000', 'WRZESIEŃ'),
   ('2', '2', '27400', 'WRZESIEŃ'),
   ('3', '4', '2340', 'maj'),
