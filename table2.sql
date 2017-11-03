@@ -19,7 +19,7 @@
   INSERT INTO `CLIENTS_GROUP` (`id`, `symbol`, `rabat`) VALUES
   ('1', 'HURT', '5.00%'),
   ('2', 'DETAL', '0.00%'),
-  ('3', 'VIT', '10.00%');
+  ('3', 'VIP', '10.00%');
     
   CREATE TABLE IF NOT EXISTS `table1` (
   `id` int(6),
@@ -40,14 +40,14 @@
   `id` int(6),
   `user_id` int(6),
   `BRUTTO` int(12),
-  `MONTH` varchar(20),
+  `DATE` varchar(20),
+  `RABAT` varchar(20),
   FOREIGN KEY (`user_id`) REFERENCES table1(`id`),
   PRIMARY KEY (`id`)
   );
-  INSERT INTO `FAKTURY` (`id`, `user_id`, `BRUTTO`, `MONTH`) VALUES
-  ('1', '1', '5000', 'WRZESIEŃ'),
-  ('2', '2', '27400', 'WRZESIEŃ'),
-  ('3', '4', '2340', 'maj'),
-  ('4', '3', '26540', 'WRZESIEŃ');
+  INSERT INTO `FAKTURY` (`id`, `user_id`, `BRUTTO`, `DATE`, `RABAT`) VALUES
+  ('1', '1', '5000', '10.09.2017', '5.00%'),
+  ('2', '2', '27400', '19.08.2017', '10.00%'),
+  ('3', '4', '2340', '11.09.2017', '0.00%'),
+  ('4', '3', '26540', '12.09.2017', '0.00%');
   
- 
