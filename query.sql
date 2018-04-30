@@ -1,4 +1,4 @@
-SELECT table1.name, table2.phone, shoop.name
+﻿SELECT table1.name, table2.phone, shoop.name
 FROM table2
 INNER JOIN table1 ON table1.id = table2.user_id
 INNER JOIN shoop ON shoop.id = table2.shoop_id
@@ -24,3 +24,10 @@ ON table2.user_id = table1.id
 GROUP BY table1.name
 ORDER BY table2.price ASC
 LIMIT 3
+
+/*UNION SELECT */
+SELECT name, phone 
+FROM table1
+INNER JOIN table2 
+ON table2.user_id = table1.id
+UNION SELECT id, name FROM shoop
